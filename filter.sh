@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git filter-repo --path common --path public --path game --path tier0 --path tier1 --path tier2 --path bitmap --path dmxloader --path particles --path vgui2/vgui_controls --path vgui2/matsys_controls --path mathlib --path vstdlib --path choreoobjects --path vtf --path scripts/waifulib --path lib --path thirdparty --path .gitmodules --path .gitignore --path utils/ --path waf --path waf.bat --path thirdpartylegalnotices.txt --path LICENSE --path tier3 --path vgui2/src/ --path materialsystem/stdshaders --path materialsystem/shaderapidx9/locald3dtypes.h --path materialsystem/IShaderSystem.h --path materialsystem/shaderlib --path materialsystem/imaterialsysteminternal.h --path materialsystem/materialsystem_global.h --force
