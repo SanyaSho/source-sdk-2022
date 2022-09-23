@@ -272,15 +272,16 @@ void CZombie::Spawn( void )
 		// This was placed as an npc_zombie_torso
 		m_fIsTorso = true;
 	}
-
+#ifndef NH2
 	m_fIsHeadless = false;
+
 
 #ifdef HL2_EPISODIC
 	SetBloodColor( BLOOD_COLOR_ZOMBIE );
 #else
 	SetBloodColor( BLOOD_COLOR_GREEN );
 #endif // HL2_EPISODIC
-
+#endif
 	m_iHealth			= sk_zombie_health.GetFloat();
 	m_flFieldOfView		= 0.2;
 

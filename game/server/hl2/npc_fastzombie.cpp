@@ -651,9 +651,11 @@ void CFastZombie::Spawn( void )
 	Precache();
 
 	m_fJustJumped = false;
-
+#ifndef NH2
 	m_fIsTorso = m_fIsHeadless = false;
-
+#else
+	m_fIsTorso = false;
+#endif
 	if( FClassnameIs( this, "npc_fastzombie" ) )
 	{
 		m_fIsTorso = false;
@@ -663,13 +665,13 @@ void CFastZombie::Spawn( void )
 		// This was placed as an npc_fastzombie_torso
 		m_fIsTorso = true;
 	}
-
+#ifndef NH2
 #ifdef HL2_EPISODIC
 	SetBloodColor( BLOOD_COLOR_ZOMBIE );
 #else
 	SetBloodColor( BLOOD_COLOR_YELLOW );
 #endif // HL2_EPISODIC
-
+#endif
 	m_iHealth			= 50;
 	m_flFieldOfView		= 0.2;
 
